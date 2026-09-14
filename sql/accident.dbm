@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+ Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.9.4" use-changelog="false" last-position="0,0" last-zoom="1" max-obj-count="4"
+	 default-schema="public" default-owner="postgres"
+	 layers="Default layer"
+	 active-layers="0"
+	 layer-name-colors="#000000"
+	 layer-rect-colors="#b4b4b4"
+	 show-layer-names="false" show-layer-rects="false">
+<database name="new_database" is-template="false" allow-conns="true">
+</database>
+
+<schema name="public" layers="0" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="accidents" layers="0" collapse-mode="2" max-obj-count="27" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="320" y="80"/>
+	<column name="submission_id" not-null="true">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="u_uid">
+		<type name="text" length="0"/>
+	</column>
+	<column name="start_time">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="end_time">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="date_accident">
+		<type name="date" length="0"/>
+	</column>
+	<column name="heure_accident">
+		<type name="time" length="0"/>
+	</column>
+	<column name="structure_declarante">
+		<type name="text" length="0"/>
+	</column>
+	<column name="adresse">
+		<type name="text" length="0"/>
+	</column>
+	<column name="type_zone">
+		<type name="text" length="0"/>
+	</column>
+	<column name="type_accident">
+		<type name="text" length="0"/>
+	</column>
+	<column name="responsabilite">
+		<type name="text" length="0"/>
+	</column>
+	<column name="poursuite">
+		<type name="text" length="0"/>
+	</column>
+	<column name="meteo">
+		<type name="text" length="0"/>
+	</column>
+	<column name="routes">
+		<type name="text" length="0"/>
+	</column>
+	<column name="type_route">
+		<type name="text" length="0"/>
+	</column>
+	<column name="submission_time">
+		<type name="timestamp" length="0"/>
+	</column>
+	<column name="photo_lieu">
+		<type name="text" length="0"/>
+	</column>
+	<column name="croquis_accident">
+		<type name="text" length="0"/>
+	</column>
+	<column name="intervention">
+		<type name="text" length="0"/>
+	</column>
+	<column name="hopital_evacue">
+		<type name="text" length="0"/>
+	</column>
+	<column name="contact_parent">
+		<type name="text" length="0"/>
+	</column>
+	<column name="latitude">
+		<type name="float8" length="0"/>
+	</column>
+	<column name="longitude">
+		<type name="float8" length="0"/>
+	</column>
+	<constraint name="accidents_pk" type="pk-constr" table="public.accidents">
+		<columns names="submission_id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="vehicules" layers="0" collapse-mode="2" max-obj-count="16" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="840" y="100"/>
+	<column name="vehicule_uuid" not-null="true">
+		<type name="text" length="0"/>
+	</column>
+	<column name="numero_vehicule">
+		<type name="text" length="0"/>
+	</column>
+	<column name="type_vehicule">
+		<type name="text" length="0"/>
+	</column>
+	<column name="etat_avant">
+		<type name="text" length="0"/>
+	</column>
+	<column name="dommages">
+		<type name="text" length="0"/>
+	</column>
+	<column name="vitesse">
+		<type name="text" length="0"/>
+	</column>
+	<column name="conducteur_genre">
+		<type name="text" length="0"/>
+	</column>
+	<column name="conducteur_age">
+		<type name="text" length="0"/>
+	</column>
+	<column name="conducteur_etat">
+		<type name="text" length="0"/>
+	</column>
+	<column name="equipement">
+		<type name="text" length="0"/>
+	</column>
+	<column name="alcool">
+		<type name="text" length="0"/>
+	</column>
+	<column name="drogue">
+		<type name="text" length="0"/>
+	</column>
+	<column name="facteurs">
+		<type name="text" length="0"/>
+	</column>
+	<constraint name="vehicules_pk" type="pk-constr" table="public.vehicules">
+		<columns names="vehicule_uuid" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="passagers" layers="0" collapse-mode="2" max-obj-count="7" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="880" y="720"/>
+	<column name="passager_uuid" not-null="true">
+		<type name="text" length="0"/>
+	</column>
+	<column name="genre">
+		<type name="text" length="0"/>
+	</column>
+	<column name="age">
+		<type name="text" length="0"/>
+	</column>
+	<column name="blessures">
+		<type name="text" length="0"/>
+	</column>
+	<column name="equipement">
+		<type name="text" length="0"/>
+	</column>
+	<constraint name="passagers_pk" type="pk-constr" table="public.passagers">
+		<columns names="passager_uuid" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="pietons" layers="0" collapse-mode="2" max-obj-count="6" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="380" y="720"/>
+	<column name="pieton_uuid" not-null="true">
+		<type name="text" length="0"/>
+	</column>
+	<column name="age">
+		<type name="text" length="0"/>
+	</column>
+	<column name="etat">
+		<type name="text" length="0"/>
+	</column>
+	<column name="genre">
+		<type name="text" length="0"/>
+	</column>
+	<constraint name="pietons_pk" type="pk-constr" table="public.pietons">
+		<columns names="pieton_uuid" ref-type="src-columns"/>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="submission_id_accidents" index="4"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="accidents_fk" index="1"/>
+	</customidxs>
+</table>
+
+<relationship name="accidents_has_many_vehicules" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#b356da"
+	 src-table="public.accidents"
+	 dst-table="public.vehicules"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="vehicules_has_many_passagers" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#ae9e34"
+	 src-table="public.vehicules"
+	 dst-table="public.passagers"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="accidents_has_many_pietons" type="rel1n" layers="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#607c0d"
+	 src-table="public.accidents"
+	 dst-table="public.pietons"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>
